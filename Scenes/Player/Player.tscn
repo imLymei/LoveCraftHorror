@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://durx6gcw00bok" path="res://Scenes/Player/Player.gd" id="1_s0eop"]
 [ext_resource type="Texture2D" uid="uid://c58bljx8uxmfc" path="res://Scenes/Player/Player32x48SpriteSheet.png" id="2_ft8w5"]
 [ext_resource type="Script" uid="uid://bxkful2e2q1kp" path="res://Components/InteractionDetector2D.gd" id="2_h54ih"]
+[ext_resource type="Resource" uid="uid://c3gr0hipn0hmx" path="res://Resources/Inventory/player_inventory.tres" id="2_ude3g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ebg8m"]
 radius = 24.0
@@ -13,6 +14,7 @@ radius = 8.0
 [node name="Player" type="CharacterBody2D" unique_id=1874931416]
 motion_mode = 1
 script = ExtResource("1_s0eop")
+inventory = ExtResource("2_ude3g")
 
 [node name="InteractionAnchor" type="Node2D" parent="." unique_id=1971000445]
 unique_name_in_owner = true
