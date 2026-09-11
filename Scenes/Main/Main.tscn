@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://jkwhv1b03ckw" path="res://Scenes/Main/Main.gd" id="1_p8rbg"]
 [ext_resource type="Texture2D" uid="uid://byew2bq62ml1y" path="res://icon.svg" id="2_qtv3y"]
+[ext_resource type="Script" uid="uid://dnvwihayr2xq1" path="res://Scenes/Main/UiOverlay.gd" id="3_cmk6n"]
+[ext_resource type="PackedScene" uid="uid://bwftinn8xf6v8" path="res://Scenes/PlayerInventory/Inventory_UI.tscn" id="4_i3fi7"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_p8rbg"]
 viewport_path = NodePath("SubViewport")
@@ -35,3 +37,9 @@ canvas_item_default_texture_filter = 0
 size = Vector2i(480, 360)
 
 [node name="World" type="Node" parent="SubViewport" unique_id=784923951 groups=["World"]]
+
+[node name="UIOverlay" type="CanvasLayer" parent="SubViewport" unique_id=142888880 groups=["UIOverlay"]]
+script = ExtResource("3_cmk6n")
+
+[node name="InventoryUi" parent="SubViewport/UIOverlay" unique_id=1543015924 instance=ExtResource("4_i3fi7")]
+unique_name_in_owner = true
