@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bwftinn8xf6v8"]
 
-[node name="PlayerInventory" type="Control" unique_id=1543015924]
+[node name="InventoryUI" type="Control" unique_id=1543015924]
 visible = false
 layout_mode = 3
 anchors_preset = 15
