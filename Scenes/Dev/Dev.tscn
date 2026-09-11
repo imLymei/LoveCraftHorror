@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://iu4gavvqmgyx" path="res://Scenes/Dev/Dev.gd" id="1_sf7sv"]
 [ext_resource type="PackedScene" uid="uid://x4l72jbfcw11" path="res://Scenes/Player/Player.tscn" id="2_sf7sv"]
 [ext_resource type="Texture2D" uid="uid://bytj2uhx3muxd" path="res://Assets/TemplateTileMap.png" id="3_ogavq"]
+[ext_resource type="Script" uid="uid://jwsqa6g8thyt" path="res://Components/InteractionArea2D.gd" id="4_e2tig"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e2tig"]
 texture = ExtResource("3_ogavq")
@@ -43,6 +44,8 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_e2tig")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebg8m"]
+
 [node name="Dev" type="Node2D" unique_id=475229756]
 script = ExtResource("1_sf7sv")
 
@@ -52,3 +55,19 @@ tile_set = SubResource("TileSet_shhcb")
 
 [node name="Player" parent="." unique_id=1874931416 instance=ExtResource("2_sf7sv")]
 position = Vector2(208, 128)
+
+[node name="InteractionArea2D" type="Area2D" parent="." unique_id=1819964156]
+position = Vector2(408, 96)
+script = ExtResource("4_e2tig")
+metadata/_custom_type_script = "uid://jwsqa6g8thyt"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea2D" unique_id=1889636558]
+shape = SubResource("RectangleShape2D_ebg8m")
+
+[node name="InteractionArea2D2" type="Area2D" parent="." unique_id=1659391349]
+position = Vector2(408, 136)
+script = ExtResource("4_e2tig")
+metadata/_custom_type_script = "uid://jwsqa6g8thyt"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea2D2" unique_id=1768885402]
+shape = SubResource("RectangleShape2D_ebg8m")

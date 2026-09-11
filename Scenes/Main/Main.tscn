@@ -11,26 +11,29 @@ script = ExtResource("1_p8rbg")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=369571911]
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=1139666039]
+[node name="WindowBackground" type="TextureRect" parent="CanvasLayer" unique_id=1139666039]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_qtv3y")
 stretch_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1628739643]
+[node name="GameWindow" type="TextureRect" parent="CanvasLayer" unique_id=1628739643]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = SubResource("ViewportTexture_p8rbg")
 expand_mode = 2
 stretch_mode = 5
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=1535546387]
+unique_name_in_owner = true
 canvas_item_default_texture_filter = 0
 size = Vector2i(480, 360)
 
