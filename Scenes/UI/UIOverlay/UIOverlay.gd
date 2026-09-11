@@ -16,7 +16,7 @@ func _ready() -> void:
 func open_inventory() -> void:
 	if current_menu:
 		current_menu.visible = false
-		if current_menu == inventory_UI:
+		if current_menu == inventory_ui:
 			current_menu = null
 			GameManager.player_can_walk = true
 			return
