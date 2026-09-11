@@ -3,6 +3,10 @@ extends CharacterBody2D
 
 const MOVE_SPEED: float = 64
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("open_inventory"):
+		print("clicked")
+		GameManager.UI_Overlay.open_inventory()
 
 @onready var sprite_2d: Sprite2D = %Sprite2D
 @onready var interaction_anchor: Node2D = %InteractionAnchor
