@@ -10,7 +10,9 @@ var current_menu: Control = null
 
 
 func _ready() -> void:
-	pass
+	for child in get_children():
+		if child is CanvasItem:
+			child.hide()
 
 
 func open_inventory() -> void:
