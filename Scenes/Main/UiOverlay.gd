@@ -14,11 +14,6 @@ func _ready() -> void:
 
 
 func open_inventory() -> void:
-	if current_menu == inventory_UI:
-		current_menu.visible = false
-		current_menu = null
-		return
-	
 	if current_menu:
 		current_menu.visible = false
 		if current_menu == inventory_UI:

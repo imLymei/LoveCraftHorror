@@ -1,6 +1,7 @@
 extends Node
 
 
+
 var world: Node :
 	get():
 		if not world:
@@ -9,6 +10,7 @@ var world: Node :
 		
 		return world
 
+var player_can_walk := true
 
 var UI_Overlay: UIOverlay :
 	get():
