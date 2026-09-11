@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://x4l72jbfcw11"]
 
 [ext_resource type="Script" uid="uid://durx6gcw00bok" path="res://Scenes/Player/Player.gd" id="1_s0eop"]
-[ext_resource type="Texture2D" uid="uid://bhntt3sjsaorx" path="res://Scenes/Player/Player32x48.png" id="2_ft8w5"]
+[ext_resource type="Texture2D" uid="uid://c58bljx8uxmfc" path="res://Scenes/Player/Player32x48SpriteSheet.png" id="2_ft8w5"]
+[ext_resource type="Script" uid="uid://bxkful2e2q1kp" path="res://Components/InteractionDetector2D.gd" id="2_h54ih"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ebg8m"]
+radius = 24.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p8rbg"]
 radius = 8.0
@@ -10,12 +14,26 @@ radius = 8.0
 motion_mode = 1
 script = ExtResource("1_s0eop")
 
+[node name="InteractionAnchor" type="Node2D" parent="." unique_id=1971000445]
+unique_name_in_owner = true
+position = Vector2(0, -16)
+
+[node name="InteractionDetector2D" type="Area2D" parent="InteractionAnchor" unique_id=216334635]
+position = Vector2(16, 0)
+script = ExtResource("2_h54ih")
+metadata/_custom_type_script = "uid://bxkful2e2q1kp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionAnchor/InteractionDetector2D" unique_id=743029838]
+shape = SubResource("CircleShape2D_ebg8m")
+
 [node name="Visuals" type="Node2D" parent="." unique_id=107168170]
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals" unique_id=804580052]
+unique_name_in_owner = true
 position = Vector2(0, -16)
 texture = ExtResource("2_ft8w5")
 hframes = 2
+vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1288416954]
 shape = SubResource("CircleShape2D_p8rbg")
