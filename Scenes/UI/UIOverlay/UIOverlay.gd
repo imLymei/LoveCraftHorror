@@ -1,9 +1,9 @@
+class_name UIOverlay
 extends CanvasLayer
 
-class_name UIOverlay
 
+@onready var inventory_ui: Control = %InventoryUI
 
-@onready var inventory_UI: Control = %InventoryUi
 
 
 var current_menu: Control = null
@@ -21,6 +21,6 @@ func open_inventory() -> void:
 			GameManager.player_can_walk = true
 			return
 	
-	current_menu = inventory_UI
+	current_menu = inventory_ui
 	current_menu.visible = true
 	GameManager.player_can_walk = false

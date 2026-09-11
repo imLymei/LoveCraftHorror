@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://csb8gds7yvboc"]
+
+[ext_resource type="Script" uid="uid://dnvwihayr2xq1" path="res://Scenes/UI/UIOverlay/UIOverlay.gd" id="1_w231r"]
+[ext_resource type="PackedScene" uid="uid://bwftinn8xf6v8" path="res://Scenes/UI/PlayerInventory/PlayerInventory.tscn" id="2_bo724"]
+
+[node name="UIOverlay" type="CanvasLayer" unique_id=701071031 groups=["UIOverlay"]]
+script = ExtResource("1_w231r")
+
+[node name="InventoryUI" parent="." unique_id=1543015924 instance=ExtResource("2_bo724")]
+unique_name_in_owner = true
