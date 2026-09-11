@@ -16,6 +16,9 @@ var UI_Overlay: UIOverlay :
 		
 		return UI_Overlay
 
+var player_can_walk := true
+
+
 func load_world_scene(scene_path: String) -> void:
 	for child in world.get_children():
 		child.queue_free()

@@ -17,7 +17,11 @@ var _last_input_direction: Vector2
 
 
 func _physics_process(_delta: float) -> void:
-	input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	if GameManager.player_can_walk:
+		input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	else:
+		input_direction = Vector2.ZERO
+	
 	velocity = input_direction * MOVE_SPEED
 	
 	move_and_slide()
