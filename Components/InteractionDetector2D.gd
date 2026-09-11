@@ -11,7 +11,6 @@ var _closest_interaction_area: InteractionArea2D :
 			_closest_interaction_area.hover_off()
 		
 		_closest_interaction_area = new_value
-		print("CLOSEST IS %s" % [new_value])
 		
 		if _closest_interaction_area:
 			_closest_interaction_area.hover_on()
@@ -50,7 +49,7 @@ func _physics_process(_delta: float) -> void:
 		var area_distance := global_position.distance_squared_to(area.global_position)
 		if not closest_area or area_distance < closest_area_distance:
 			closest_area = area
-			area_distance = closest_area_distance
+			closest_area_distance = area_distance
 	
 	_closest_interaction_area = closest_area
 

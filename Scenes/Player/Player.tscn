@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://bxkful2e2q1kp" path="res://Components/InteractionDetector2D.gd" id="2_h54ih"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ebg8m"]
-radius = 16.0
+radius = 24.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p8rbg"]
 radius = 8.0

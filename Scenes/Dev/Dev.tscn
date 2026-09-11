@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://x4l72jbfcw11" path="res://Scenes/Player/Player.tscn" id="2_sf7sv"]
 [ext_resource type="Texture2D" uid="uid://bytj2uhx3muxd" path="res://Assets/TemplateTileMap.png" id="3_ogavq"]
 [ext_resource type="Script" uid="uid://jwsqa6g8thyt" path="res://Components/InteractionArea2D.gd" id="4_e2tig"]
+[ext_resource type="Script" uid="uid://b62fl8cstrsfk" path="res://Components/InteractionHover.gd" id="5_5erjo"]
+[ext_resource type="Texture2D" uid="uid://byew2bq62ml1y" path="res://icon.svg" id="6_1lysg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e2tig"]
 texture = ExtResource("3_ogavq")
@@ -64,6 +66,15 @@ metadata/_custom_type_script = "uid://jwsqa6g8thyt"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea2D" unique_id=1889636558]
 shape = SubResource("RectangleShape2D_ebg8m")
 
+[node name="InteractionHover" type="Node2D" parent="InteractionArea2D" unique_id=1587100123 node_paths=PackedStringArray("interaction_area_2d")]
+script = ExtResource("5_5erjo")
+interaction_area_2d = NodePath("..")
+metadata/_custom_type_script = "uid://b62fl8cstrsfk"
+
+[node name="Sprite2D" type="Sprite2D" parent="InteractionArea2D/InteractionHover" unique_id=61000283]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("6_1lysg")
+
 [node name="InteractionArea2D2" type="Area2D" parent="." unique_id=1659391349]
 position = Vector2(408, 136)
 script = ExtResource("4_e2tig")
@@ -71,3 +82,12 @@ metadata/_custom_type_script = "uid://jwsqa6g8thyt"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea2D2" unique_id=1768885402]
 shape = SubResource("RectangleShape2D_ebg8m")
+
+[node name="InteractionHover" type="Node2D" parent="InteractionArea2D2" unique_id=209908252 node_paths=PackedStringArray("interaction_area_2d")]
+script = ExtResource("5_5erjo")
+interaction_area_2d = NodePath("..")
+metadata/_custom_type_script = "uid://b62fl8cstrsfk"
+
+[node name="Sprite2D" type="Sprite2D" parent="InteractionArea2D2/InteractionHover" unique_id=278543660]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("6_1lysg")
