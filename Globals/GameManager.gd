@@ -1,6 +1,8 @@
 extends Node
 
 
+signal player_is_disabled_changed(new_value: bool)
+
 
 var world: Node :
 	get():
@@ -11,6 +13,13 @@ var world: Node :
 		return world
 
 var player_can_walk := true
+var player_is_disabled := false :
+	set(new_value):
+		if player_is_disabled == new_value:
+			return
+		
+		player_is_disabled = new_value
+		player_is_disabled_changed.emit(player_is_disabled)
 
 var UI_Overlay: UIOverlay :
 	get():

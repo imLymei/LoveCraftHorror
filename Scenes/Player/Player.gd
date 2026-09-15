@@ -15,6 +15,10 @@ var input_direction: Vector2
 var _last_input_direction: Vector2
 
 
+func _ready() -> void:
+	GameManager.player_is_disabled_changed.connect(_on_player_is_disabled_changed)
+
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("open_inventory"):
 		GameManager.UI_Overlay.open_inventory()
@@ -54,3 +58,8 @@ func _handle_rotation() -> void:
 		sprite_2d.flip_h = true
 		sprite_2d.frame = 1
 		interaction_anchor.rotation = Vector2.RIGHT.angle()
+
+
+func _on_player_is_disabled_changed(new_value: bool) -> void:
+	set_process_unhandled_input(not new_value)
+	set_physics_process(not new_value)
