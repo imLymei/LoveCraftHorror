@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://jwbu5dcm3pfn"]
+
+[ext_resource type="Script" uid="uid://ylrorn5yng3v" path="res://Scenes/UI/DialogUI/DialogUI.gd" id="1_vcpop"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vcpop"]
+bg_color = Color(0, 0, 0, 0.78431374)
+
+[node name="DialogUI" type="Control" unique_id=366803608]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_vcpop")
+
+[node name="Panel" type="Panel" parent="." unique_id=2074616868]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vcpop")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=573258691]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2122274681]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=469690846]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Title"
+
+[node name="DialogLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1854314789]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Dialog"

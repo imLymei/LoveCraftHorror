@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://csb8gds7yvboc"]
 
 [ext_resource type="Script" uid="uid://dnvwihayr2xq1" path="res://Scenes/UI/UIOverlay/UIOverlay.gd" id="1_w231r"]
-[ext_resource type="PackedScene" uid="uid://bwftinn8xf6v8" path="res://Scenes/UI/Inventory/InventoryUI.tscn" id="2_bo724"]
+[ext_resource type="PackedScene" uid="uid://bwftinn8xf6v8" path="res://Scenes/UI/InventoryUI/InventoryUI.tscn" id="2_bo724"]
+[ext_resource type="PackedScene" uid="uid://jwbu5dcm3pfn" path="res://Scenes/UI/DialogUI/DialogUI.tscn" id="3_bo724"]
 
 [node name="UIOverlay" type="CanvasLayer" unique_id=701071031 groups=["UIOverlay"]]
 script = ExtResource("1_w231r")
@@ -9,3 +10,6 @@ script = ExtResource("1_w231r")
 [node name="InventoryUI" parent="." unique_id=1543015924 instance=ExtResource("2_bo724")]
 unique_name_in_owner = true
 visible = false
+
+[node name="DialogUI" parent="." unique_id=366803608 instance=ExtResource("3_bo724")]
+unique_name_in_owner = true
