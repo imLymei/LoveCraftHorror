@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://s4xokublagx8"]
+
+[ext_resource type="Texture2D" uid="uid://7y8mkwctwx80" path="res://Assets/InventorySlot.png" id="1_isarv"]
+[ext_resource type="Script" uid="uid://0s0p254crqma" path="res://Scenes/UI/Inventory/InventoryUISlot.gd" id="2_ochjo"]
+[ext_resource type="FontFile" uid="uid://bmid5almxabg4" path="res://Assets/Pixel Musketeer.ttf" id="3_33hcj"]
+
+[node name="InventoryUISlot" type="TextureRect" unique_id=824189170]
+custom_minimum_size = Vector2(11, 11)
+offset_right = 11.0
+offset_bottom = 11.0
+texture = ExtResource("1_isarv")
+expand_mode = 1
+script = ExtResource("2_ochjo")
+
+[node name="ItemDisplay" type="TextureRect" parent="." unique_id=809792612]
+custom_minimum_size = Vector2(9, 9)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="ItemQuantity" type="Label" parent="." unique_id=2054591629]
+layout_mode = 1
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 19.0
+offset_bottom = 24.0
+scale = Vector2(0.3, 0.3)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_33hcj")
+text = "12"
+horizontal_alignment = 2
+
+[node name="ContextMenu" type="PopupMenu" parent="." unique_id=779231072]
+oversampling_override = 1.0
+
+[node name="OpenMenuButton" type="Button" parent="." unique_id=1105940973]
+visible = false
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(9, 9)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+button_mask = 2

@@ -21,6 +21,6 @@ func open_inventory() -> void:
 			GameManager.player_can_walk = true
 			return
 	
-	current_menu = inventory_UI
+	current_menu = inventory_UI	
 	current_menu.visible = true
 	GameManager.player_can_walk = false

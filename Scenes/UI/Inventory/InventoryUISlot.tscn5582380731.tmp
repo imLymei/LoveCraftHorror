@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://s4xokublagx8"]
+
+[ext_resource type="Texture2D" uid="uid://7y8mkwctwx80" path="res://Assets/InventorySlot.png" id="1_isarv"]
+[ext_resource type="Script" uid="uid://0s0p254crqma" path="res://Scenes/UI/Inventory/InventoryUiSlot.gd" id="2_ochjo"]
+[ext_resource type="FontFile" uid="uid://bmid5almxabg4" path="res://Assets/Pixel Musketeer.ttf" id="3_33hcj"]
+
+[node name="InventoryUiSlot" type="TextureRect" unique_id=824189170]
+custom_minimum_size = Vector2(11, 11)
+texture = ExtResource("1_isarv")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("2_ochjo")
+
+[node name="ItemDisplay" type="TextureRect" parent="." unique_id=809792612]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 9.0
+offset_bottom = 9.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemQuantity" type="Label" parent="." unique_id=2054591629]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 19.333334
+offset_bottom = 24.0
+scale = Vector2(0.3, 0.3)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_33hcj")
+horizontal_alignment = 2

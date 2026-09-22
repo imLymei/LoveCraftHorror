@@ -43,7 +43,6 @@ texture = ExtResource("2_qtv3y")
 stretch_mode = 1
 
 [node name="GameWindow" type="TextureRect" parent="CanvasLayer" unique_id=1628739643]
-unique_name_in_owner = true
 material = SubResource("ShaderMaterial_cmk6n")
 anchors_preset = 15
 anchor_right = 1.0
